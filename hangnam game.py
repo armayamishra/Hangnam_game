@@ -1,13 +1,8 @@
 import random
-
-# List of words to choose from
 words = ["python", "hangman", "computer", "programming", "challenge"]
-
-# Function to choose a random word
 def choose_word():
     return random.choice(words)
 
-# Function to display the current state of the word with blanks
 def display_word(word, guessed_letters):
     display = ""
     for letter in word:
@@ -17,7 +12,6 @@ def display_word(word, guessed_letters):
             display += "_"
     return display
 
-# Function to play Hangman
 def play_hangman():
     word_to_guess = choose_word()
     guessed_letters = []
@@ -50,5 +44,4 @@ def play_hangman():
     if attempts == 0:
         print("You ran out of attempts. The word was:", word_to_guess)
 
-# Start the game
 play_hangman()
